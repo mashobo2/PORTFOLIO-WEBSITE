@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #007bff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Add spacing below navbar */
+header, section {
+  padding-top: 80px;
+}
+
+/* ===== Header Section ===== */
+header {
+  background: linear-gradient(to right, #007bff, #00b4d8);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInUp 1.5s ease;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+}
+
+.hero-text span {
+  color: #fff700;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Button */
+.btn {
+  background: white;
+  color: #007bff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* ===== Section Titles ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00b4d8;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* ===== About Section ===== */
+#about p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+  font-size: 1.1em;
+}
+
+/* ===== Skills Section ===== */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-card {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Projects Section ===== */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  width: 280px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+  color: #00b4d8;
+}
+
+/* ===== Contact Section ===== */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
